@@ -1,0 +1,29 @@
+<div class="currency-converter">
+    <form [formGroup]="conversionForm">
+        <div class="form-group">
+            <label for="currency" matTooltip="Click here to see the full list of currencies and their rates" matTooltipPositionAtOrigin="left below">
+                <a [routerLink]="['/currencies']">
+                    Currency:
+                </a>
+            </label>
+            <select id="currency" formControlName="selectedCurrency" class="form-control">
+                <option *ngFor="let currency of currencies" [value]="currency.name">{{ currency.name }}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exchangeRate">Exchange Rate:</label>
+            <input type="text" id="exchangeRate" class="form-control" [value]="exchangeRate ? (exchangeRate | number:'1.2-2') : ''" readonly>
+        </div>
+        <div class="form-group">
+            <label for="amountPLN">Amount in PLN:</label>
+            <input type="number" id="amountPLN" formControlName="amountPLN" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="amountForeign">Amount in {{ selectedCurrency }}:</label>
+            <input type="number" id="amountForeign" formControlName="amountForeign" class="form-control">
+        </div>
+        <div *ngIf="warningMessage" class="alert alert-warning">
+            {{ warningMessage }}
+        </div>
+    </form>
+</div>

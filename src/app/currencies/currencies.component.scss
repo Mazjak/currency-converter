@@ -1,0 +1,46 @@
+.currencies {
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 auto;
+
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #f4f4f4;
+      }
+    }
+  }
+  .back-button {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .back-button:hover {
+    background-color: #ddd;
+  }
